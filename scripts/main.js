@@ -15,7 +15,8 @@ var app = angular.module('myapp', [])
             $http.get($scope.getAddressQuery())
                 .success(function (response) {
                     $scope.addCity(response);
-                }).error(function (response) {
+                }).error(function (res) {
+                throw new Error("Send Error");
             })
         }
 
