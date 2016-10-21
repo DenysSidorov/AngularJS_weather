@@ -1,0 +1,29 @@
+﻿<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>City</th>
+            <th>Temp Kelvin</th>
+            <th>Description</th>
+            <th>Wind Speed</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in townArray">
+            <td>{{item.name}}</td>
+            <td>{{item.main.temp}}</td>
+            <td>{{item.weather[0].description}}</td>
+            <td>{{item.wind.speed}}</td>
+            <td>
+                <button class="btn btn-xs btn-primary" ng-click="delete(item)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-primary" ng-click="queryWeather()">Add City</button>
+    </div>
+</div>

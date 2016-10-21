@@ -1,0 +1,10 @@
+.inputCity{
+    margin: 0 0 15px 15px;
+}
+@media screen and (max-width: 974px) {
+*{
+    font: 10px/10px 'Arial';
+}
+}
+
+
